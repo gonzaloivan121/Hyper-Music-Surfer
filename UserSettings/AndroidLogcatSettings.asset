@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "b651aefa",
         "name": "com.xloxlolex.HyperMusicSurfer",
-        "processId": 31882,
+        "processId": 6873,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -18,6 +18,108 @@
             "deviceId": "b651aefa",
             "name": "com.xloxlolex.HyperMusicSurfer",
             "processId": 31882,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 7509,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 17714,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 18136,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 27439,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 30270,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 31974,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 13671,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 14861,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 32411,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 6163,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 10325,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 17622,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 19052,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 21094,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 26723,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 28190,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 6873,
             "exited": false
         }
     ],

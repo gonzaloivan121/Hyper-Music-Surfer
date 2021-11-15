@@ -17,9 +17,12 @@ namespace SplineMesh {
         private GameObject generated;
         private Spline spline;
         private float rate = 0;
+        private float speed;
 
         public GameObject Follower;
-        public float DurationInSecond;
+
+        public float minSpeed;
+        public float maxSpeed;
 
         private void OnEnable() {
             rate = 0;
@@ -29,26 +32,30 @@ namespace SplineMesh {
             generated = generatedTranform != null ? generatedTranform.gameObject : Instantiate(Follower, gameObject.transform);
             generated.name = generatedName;
 
-            spline = GetComponent<Spline>(); 
-#if UNITY_EDITOR
+            spline = GetComponent<Spline>();
+            speed = minSpeed;
+/*#if UNITY_EDITOR
             EditorApplication.update += EditorUpdate;
-#endif
+#endif*/
         }
 
         void OnDisable() {
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
             EditorApplication.update -= EditorUpdate;
-#endif
+#endif*/
         }
 
-#if UNITY_STANDALONE || UNITY_ANDROID || UNITY_IOS
         void Update() {
+#if UNITY_STANDALONE || UNITY_ANDROID || UNITY_IOS
             EditorUpdate();
-        }
 #endif
+        }
 
         void EditorUpdate() {
-            rate += Time.deltaTime / DurationInSecond;
+            if (speed < maxSpeed) {
+                speed += Time.deltaTime;
+            }
+            rate += Time.deltaTime * (speed / 4 / 100f);
             if (rate > spline.nodes.Count - 1) {
                 rate -= spline.nodes.Count - 1;
             }

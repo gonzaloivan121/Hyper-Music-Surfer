@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2962989877622567349}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArmLower.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,9 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6933502760362311129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,9 +70,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7946310770715014845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,9 +101,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8932596906613996710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: foot.r_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,9 +131,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1448164888087892884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArmLower.L.001
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,10 +162,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1666816665343035467}
-  - component: {fileID: 2112813980018354372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,20 +184,6 @@ Transform:
   m_Father: {fileID: 1666816665757785949}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2112813980018354372
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666816665343035466}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.11
-  m_Height: 0
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.305, z: 0.67}
 --- !u!1 &1666816665757785948
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +196,7 @@ GameObject:
   - component: {fileID: 1666816665757785950}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +233,7 @@ MonoBehaviour:
   pivot: {fileID: 7890440467796288485}
   stickman: {fileID: 2083735363458289115}
   cam: {fileID: 1666816666311444275}
-  rotateSpeed: 2.5
+  rotateSpeed: 1
   speedMultiplier: 10
 --- !u!1 &1666816666311444273
 GameObject:
@@ -261,7 +246,8 @@ GameObject:
   - component: {fileID: 1666816666311444276}
   - component: {fileID: 1666816666311444275}
   - component: {fileID: 1666816666311444274}
-  m_Layer: 0
+  - component: {fileID: 9012053677613210790}
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -275,8 +261,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666816666311444273}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.32999995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1666816665757785949}
@@ -333,6 +319,66 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666816666311444273}
   m_Enabled: 1
+--- !u!114 &9012053677613210790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666816666311444273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1666816666311444276}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &2008835493187406764
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,9 +389,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1201055444770066710}
   - component: {fileID: 1666816667294806192}
-  m_Layer: 0
+  - component: {fileID: 8019322079228348930}
+  - component: {fileID: 3313612782011232210}
+  m_Layer: 6
   m_Name: Stickman
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +423,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008835493187406764}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e39298f3619509a4f9e36cd11bc6ed18, type: 3}
   m_Controller: {fileID: 9100000, guid: b3cff6f72fb3a2a4791e3d24288e6b5f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -385,6 +433,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8019322079228348930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008835493187406764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f767dc74850c440ab92d9683c96616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  DistanceToGround: 0.85
+--- !u!136 &3313612782011232210
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008835493187406764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.56
+  m_Height: 7.87
+  m_Direction: 1
+  m_Center: {x: 0, y: 4.32, z: 0}
 --- !u!1 &2066549014734488729
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,9 +473,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2655618558577117811}
   - component: {fileID: 7201749905906398051}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,7 +513,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: e39298f3619509a4f9e36cd11bc6ed18, type: 3}
+  - {fileID: 2100000, guid: 7e9cc8ce6a799614cb8c08cbaa7e3ff2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -497,9 +575,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7560956807185155621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -527,9 +605,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6541985914745290236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: foot.l_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -557,9 +635,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3759676933044984378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -588,9 +666,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4416546117908035115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLeg.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,9 +697,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4681625192620184637}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,9 +728,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6176453520896834708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,9 +759,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1468760787367155922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperChest
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -714,9 +792,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 66414909710461917}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,9 +823,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4134885841319400572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerChest
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -776,9 +854,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1984680184531822623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArmLower.R.001
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -807,9 +885,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138633645835592466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: foot.l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -838,9 +916,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7288286894631250758}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -869,9 +947,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2179454028420604826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -900,9 +978,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4555142094225185771}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArmLower.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -931,9 +1009,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8308223636029454982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -962,9 +1040,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4461977394893776388}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -994,9 +1072,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720006397284229694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1024,9 +1102,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8759174428010535001}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1055,9 +1133,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7790053913171476872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Armature
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,9 +1164,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5238819353109691170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1119,9 +1197,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7583291168511039465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLeg.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1150,9 +1228,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6923898805823880284}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: foot.r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1257,6 +1335,16 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8b62955b8e900e943b3a6d4caf308926,
         type: 3}
       propertyPath: m_Name
+      value: Skateboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b62955b8e900e943b3a6d4caf308926,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b62955b8e900e943b3a6d4caf308926,
+        type: 3}
+      propertyPath: m_TagString
       value: Skateboard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
