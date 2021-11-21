@@ -5,10 +5,12 @@ public class GroundCheck : MonoBehaviour {
     public bool isGrounded;
     public LayerMask layerMask;
 
-    private void Update() {
+    void FixedUpdate() {
         RaycastHit hit;
-        Ray ray = new Ray(transform.position, Vector2.down);
-        if (Physics.Raycast(ray, distanceToCheck, layerMask)) {
+        Ray ray = new Ray(transform.position, -transform.up/4);
+        Debug.DrawRay(ray.origin, ray.direction, Color.green);
+
+        if (Physics.Raycast(ray, out hit, distanceToCheck, layerMask)) {
             isGrounded = true;
         } else {
             isGrounded = false;
