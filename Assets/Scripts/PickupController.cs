@@ -81,7 +81,7 @@ namespace SplineMesh {
                 float randomAngle = Random.Range(0, 359);
                 Vector3 randomRot = new Vector3(0f, 0f, randomAngle);
 
-                GameObject pivot = SpawnFromPool("Pickup", sample.location, randomRot);
+                GameObject pivot = SpawnFromPool(pickupTag, sample.location, randomRot);
 
                 Pickup pickup = pivot.GetComponentInChildren<Pickup>();
                 pickup.SetGameController(gameController);
