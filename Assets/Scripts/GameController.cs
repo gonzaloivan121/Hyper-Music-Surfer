@@ -1,29 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using SplineMesh;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-    public int score = 0;
+    private int score = 0;
+
+    public int health = 0;
+
     public PlayerController player;
+    public ExampleFollowSpline followSplineController;
+
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI speedText;
 
-    public bool test;
-
-    // Start is called before the first frame update
     void Start() {
         QualitySettings.vSyncCount = 1;
         Cursor.lockState = CursorLockMode.Locked;
-        scoreText.text = "" + score;
+        scoreText.text = "Score: " + score;
+        healthText.text = "Health: " + health;
+        speedText.text = "Speed: 0";
     }
 
-    // Update is called once per frame
     void Update() {
-        
+        speedText.text = "Speed: " + followSplineController.GetSpeed();
     }
 
     public void UpdateScore(int points) {
         score += points;
-        scoreText.text = "" + score;
+        scoreText.text = "Score: " + score;
     }
+
+    public void LooseHealth() {
+        health--;
+        healthText.text = "Health: " + health;
+    }
+
 }

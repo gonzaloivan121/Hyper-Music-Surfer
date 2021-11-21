@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace SplineMesh {
-
     [RequireComponent(typeof(Spline))]
     public class ExampleFollowSpline : MonoBehaviour {
         private GameObject generated;
@@ -30,6 +29,10 @@ namespace SplineMesh {
 
         void FixedUpdate() {
             MovePlayer();
+        }
+
+        public int GetSpeed() {
+            return Mathf.RoundToInt(rate / speed * 1000);
         }
 
         void MovePlayer() {
