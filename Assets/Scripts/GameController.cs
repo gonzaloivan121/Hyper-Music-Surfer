@@ -5,16 +5,15 @@ using SplineMesh;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-    private int score = 0;
-
     public int health = 0;
-
     public PlayerController player;
-    public ExampleFollowSpline followSplineController;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI speedText;
+
+    private int score = 0;
+    private float speed = 0;
 
     void Start() {
         QualitySettings.vSyncCount = 1;
@@ -25,7 +24,13 @@ public class GameController : MonoBehaviour {
     }
 
     void Update() {
-        speedText.text = "Speed: " + followSplineController.GetSpeed();
+        CalculatePlayerSpeed();
+        //speedText.text = "Speed: " + Mathf.RoundToInt(speed);
+        speedText.text = "Speed: " + speed;
+    }
+
+    void CalculatePlayerSpeed() {
+        speed = player.CalculateSpeed();
     }
 
     public void UpdateScore(int points) {

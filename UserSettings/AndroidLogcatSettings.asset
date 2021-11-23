@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "b651aefa",
         "name": "com.xloxlolex.HyperMusicSurfer",
-        "processId": 11191,
+        "processId": 11332,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -210,6 +210,12 @@
             "deviceId": "b651aefa",
             "name": "com.xloxlolex.HyperMusicSurfer",
             "processId": 11191,
+            "exited": false
+        },
+        {
+            "deviceId": "b651aefa",
+            "name": "com.xloxlolex.HyperMusicSurfer",
+            "processId": 11332,
             "exited": false
         }
     ],

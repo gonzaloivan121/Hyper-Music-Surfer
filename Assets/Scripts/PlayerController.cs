@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour {
     public float gravityScale = 1f;
     float velocity;
 
+    private Vector3 lastPosition;
+
     // Start is called before the first frame update
     void Start() {
         TapCount = 0;
@@ -168,6 +170,13 @@ public class PlayerController : MonoBehaviour {
             cam.transform.localPosition.y,
             z
         );
+    }
+
+    public float CalculateSpeed() {
+        float speed = (Vector3.Distance(lastPosition, transform.position) / Time.deltaTime) * 2f;
+        lastPosition = transform.position;
+
+        return speed;
     }
 
 }
