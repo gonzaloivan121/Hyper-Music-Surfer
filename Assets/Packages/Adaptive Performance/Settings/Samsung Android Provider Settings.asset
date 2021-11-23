@@ -27,11 +27,11 @@ MonoBehaviour:
       m_VisualImpact: 2
       m_Target: 7
       m_MaxLevel: 45
-      m_MinBound: 60
-      m_MaxBound: 105
+      m_MinBound: 30
+      m_MaxBound: 75
     m_AdaptiveResolution:
       m_Name: Adaptive Resolution
-      m_Enabled: 0
+      m_Enabled: 1
       m_Scale: -1
       m_VisualImpact: 0
       m_Target: 6
@@ -58,7 +58,7 @@ MonoBehaviour:
       m_MaxBound: -1
     m_AdaptiveLut:
       m_Name: Adaptive Lut
-      m_Enabled: 0
+      m_Enabled: 1
       m_Scale: -1
       m_VisualImpact: 1
       m_Target: 3
@@ -67,7 +67,7 @@ MonoBehaviour:
       m_MaxBound: -1
     m_AdaptiveMSAA:
       m_Name: Adaptive MSAA
-      m_Enabled: 0
+      m_Enabled: 1
       m_Scale: -1
       m_VisualImpact: 1
       m_Target: 6
@@ -76,7 +76,7 @@ MonoBehaviour:
       m_MaxBound: -1
     m_AdaptiveShadowCascades:
       m_Name: Adaptive Shadow Cascade
-      m_Enabled: 0
+      m_Enabled: 1
       m_Scale: -1
       m_VisualImpact: 1
       m_Target: 3
@@ -85,7 +85,7 @@ MonoBehaviour:
       m_MaxBound: -1
     m_AdaptiveShadowDistance:
       m_Name: Adaptive Shadow Distance
-      m_Enabled: 0
+      m_Enabled: 1
       m_Scale: -1
       m_VisualImpact: 0
       m_Target: 2
@@ -94,7 +94,7 @@ MonoBehaviour:
       m_MaxBound: -1
     m_AdaptiveShadowmapResolution:
       m_Name: Adaptive Shadowmap Resolution
-      m_Enabled: 0
+      m_Enabled: 1
       m_Scale: -1
       m_VisualImpact: 0
       m_Target: 2
@@ -103,7 +103,7 @@ MonoBehaviour:
       m_MaxBound: -1
     m_AdaptiveShadowQuality:
       m_Name: Adaptive Shadow Quality
-      m_Enabled: 0
+      m_Enabled: 1
       m_Scale: -1
       m_VisualImpact: 2
       m_Target: 3
@@ -112,7 +112,7 @@ MonoBehaviour:
       m_MaxBound: -1
     m_AdaptiveSorting:
       m_Name: Adaptive Sorting
-      m_Enabled: 0
+      m_Enabled: 1
       m_Scale: -1
       m_VisualImpact: 1
       m_Target: 1
